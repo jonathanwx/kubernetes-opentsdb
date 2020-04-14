@@ -24,7 +24,7 @@ spec:
       containers:
       - name: opentsdb
         imagePullPolicy: IfNotPresent
-        image: jonathanwx/kubernetes-opentsdb:latest
+        image: jonathanwx/kubernetes-opentsdb:2.4.0
         ports:
           - containerPort: 4242
         env:
