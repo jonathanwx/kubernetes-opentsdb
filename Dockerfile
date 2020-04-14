@@ -28,8 +28,6 @@ RUN wget https://github.com/OpenTSDB/opentsdb/releases/download/v${OPENTSDB_VERS
 # COPY opentsdb-${OPENTSDB_VERSION}_all.deb /
 RUN dpkg -i /opentsdb-${OPENTSDB_VERSION}_all.deb && chmod +x /usr/share/opentsdb/bin/tsdb
 
-RUN rm -rf /opentsdb-${OPENTSDB_VERSION}_all.deb
-
 # change time zone
 RUN cp /usr/share/zoneinfo/Asia/Shanghai  /etc/localtime
 
