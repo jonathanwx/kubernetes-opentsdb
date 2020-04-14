@@ -24,9 +24,9 @@ COPY conf/* /etc/opentsdb/
 COPY scripts/start.sh /
 RUN chmod +x /start.sh
 
-RUN wget https://github.com/OpenTSDB/opentsdb/releases/download/v${OPENTSDB_VERSION}/opentsdb-${OPENTSDB_VERSION}_all.deb -P /
+RUN wget https://github.com/OpenTSDB/opentsdb/releases/download/v${OPENTSDB_VERSION}/opentsdb-${OPENTSDB_VERSION}_all.deb
 # COPY opentsdb-${OPENTSDB_VERSION}_all.deb /
-RUN dpkg -i /opentsdb-${OPENTSDB_VERSION}_all.deb && chmod +x /usr/share/opentsdb/bin/tsdb
+RUN dpkg -i opentsdb-${OPENTSDB_VERSION}_all.deb && chmod +x /usr/share/opentsdb/bin/tsdb
 
 RUN rm -rf /opentsdb-${OPENTSDB_VERSION}_all.deb
 
