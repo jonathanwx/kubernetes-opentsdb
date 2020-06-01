@@ -30,7 +30,7 @@ RUN dpkg -i opentsdb-${OPENTSDB_VERSION}_all.deb && chmod +x /usr/share/opentsdb
 
 
 # fix bugs  https://help.aliyun.com/noticelist/articleid/1060035134.html
-RUN rm -rf /usr/share/opentsdb/lib*
+RUN rm -rf /usr/share/opentsdb/lib/*
 RUN wget -P /kafka/libs https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.9.10.4/jackson-databind-2.9.10.4.jar
 RUN wget -P /kafka/libs https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.9.10/jackson-annotations-2.9.10.jar
 RUN wget -P /kafka/libs https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-core/2.9.10/jackson-core-2.9.10.jar
